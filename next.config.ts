@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
+  // Vercel-specific configuration
+  images: {
+    unoptimized: process.env.VERCEL === '1',
+  },
 };
 
 export default nextConfig;
